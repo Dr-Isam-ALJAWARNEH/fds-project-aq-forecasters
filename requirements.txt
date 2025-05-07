@@ -1,0 +1,8 @@
+pandas
+matplotlib
+seaborn
+statsmodels
+geohash
+statsmodels
+scikit-learn
+folium
