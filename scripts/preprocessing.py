@@ -1,7 +1,7 @@
 
 import pandas as pd
 import os
-import geohash
+import geohash2 as geohash
 
 class AirQualityPreprocessor:
     def __init__(self, filepath):
