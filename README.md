@@ -41,7 +41,14 @@ project/
   - Baseline vs. Scenario plots
   - Heatmaps showing PM2.5 improvement by location
 
-## 🛠️ Setup Instructions
+## How to Run
+
+### Option 1: Run on Google Colab
+
+Open the notebook by directly clicking on "open in Colab" badge on the top of the notebooks.
+
+### Option 2: Run Locally
+#### 🛠️ Setup Instructions
 
 1. **Clone the Repository**
    ```bash
@@ -60,26 +67,18 @@ source venv/bin/activate  # or venv\Scripts\activate on Windows
 ```bash
 pip install -r requirements.txt
 ```
-
-## How to Run
-
-### Option 1: Run Locally
-
-1.  **Preprocess the data**
+5.  **Preprocess the data**
     
     -   Run `preprocessing.ipynb` or `scripts/preprocessing.py`
         
-2.  **Explore the data**
+6.  **Explore the data**
     
     -   Use `eda.ipynb` to visualize trends, distribution, and geohash insights.
         
-3.  **Train Forecasting Models and Simulate Scenarios**
+7.  **Train Forecasting Models and Simulate Scenarios**
     
     -   Use `modeling_forecast.ipynb` or call `ScenarioSimulator` from `scenario_simulation.py`.
 
-### Option 2: Run on Google Colab
-
-Open the notebook by directly clicking on "open in Colab" badge on the top of the notebooks.
 
 ## Example Results
 
