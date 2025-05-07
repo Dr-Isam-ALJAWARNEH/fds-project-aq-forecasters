@@ -16,7 +16,6 @@ This project forecasts air pollution levels (PM2.5) in New York and Boston using
 project/  
 │  
 ├── data/ # Raw and processed datasets  
-├── models/ # Saved ARIMA models by city and geohash  
 ├── notebooks/  
   ├── preprocessing.ipynb # Data cleaning, geohashing  
   ├── eda.ipynb # Exploratory Data Analysis  
@@ -88,5 +87,12 @@ pip install -r requirements.txt
 ## Technologies Used
 
 -   pandas, matplotlib, seaborn, statsmodels, geohash, statsmodels, sklearn
+
+## Authors
+
+- [Nour Eddin Al Shammari](https://github.com/Noureddin-SH)
+- [Yonatan Moges](https://github.com/YonatanMoges)
+
+
 
 
