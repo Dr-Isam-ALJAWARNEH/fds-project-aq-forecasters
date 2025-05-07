@@ -6,7 +6,6 @@ This project forecasts air pollution levels (PM2.5) in New York and Boston using
 
 - Forecast PM2.5 air pollution levels across spatial regions
 - Incorporate spatial granularity using geohashes
-- Simulate real-world scenarios (e.g., green policies, wildfires)
 - Visualize the impact of interventions on future air quality
 - Support decision-making through interpretable forecasts
 
