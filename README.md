@@ -61,7 +61,9 @@ source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-## 🚀 How to Run
+## How to Run
+
+### Option 1: Run Locally
 
 1.  **Preprocess the data**
     
@@ -74,6 +76,10 @@ pip install -r requirements.txt
 3.  **Train Forecasting Models and Simulate Scenarios**
     
     -   Use `modeling_forecast.ipynb` or call `ScenarioSimulator` from `scenario_simulation.py`.
+
+### Option 2: Run on Google Colab
+
+Open the notebook by directly clicking on "open in Colab" badge on the top of the notebooks.
 
 ## Example Results
 
