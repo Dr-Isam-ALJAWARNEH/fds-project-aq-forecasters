@@ -66,12 +66,8 @@ class ARIMAForecastingPipeline:
 
             try:
                 model, forecast, metrics = forecaster.run()
-                self.geohash_forecasts.append({
-                "type": "geohash",
-                "geohash": geohash,
-                "forecast": forecast,
-                "metrics": metrics
-            })
+                self.forecasts[geohash] = forecast
+
 
                 metrics_list.append(metrics)
                 print(f"✅ Completed geohash {geohash}. RMSE: {metrics['RMSE']:.2f}, MAPE: {metrics['MAPE']:.2f}")
