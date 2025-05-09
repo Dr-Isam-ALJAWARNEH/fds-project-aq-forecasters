@@ -50,12 +50,18 @@ class ScenarioSimulator:
         return pipeline.forecasts
 
     def plot_baseline_vs_scenario_comparison(self, scenario_forecasts: Dict[str, pd.DataFrame], ncols: int = 3) -> None:
-        common_geohashes = set(self.forecasts.keys()).intersection(scenario_forecasts.keys())
-        n = len(common_geohashes)
-        if n == 0:
+    # Filter only geohash-level keys 
+        common_geohashes = {
+            g for g in self.forecasts.keys()
+            if g != "city" and g in scenario_forecasts
+        }
+
+        if not common_geohashes:
             print("No common geohashes found between baseline and scenario.")
             return
 
+        print(f"Plotting comparisons for {len(common_geohashes)} geohashes...")
+        n = len(common_geohashes)
         nrows = (n + ncols - 1) // ncols
         fig, axes = plt.subplots(nrows, ncols, figsize=(5 * ncols, 4 * nrows))
         axes = axes.flatten()
@@ -70,14 +76,14 @@ class ScenarioSimulator:
             ax.set_title(f"{geohash}")
             ax.tick_params(axis='x', rotation=45)
 
+        # Turn off unused subplots
         for i in range(idx + 1, len(axes)):
             axes[i].axis('off')
 
         fig.suptitle(f"{self.city_name} – Baseline vs Scenario Forecasts", fontsize=16)
-
-        # Add single global legend
         fig.legend(["Baseline Forecast", "Scenario Forecast"], loc='upper center', ncol=2)
         plt.tight_layout(rect=[0, 0.05, 1, 0.95])
         plt.show()
+
 
     
